@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+    />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark text-white">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Galéria</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="maps.html">Mapa</a>
+            </li>
+            <li>
+                <input type="text" id="myInput" onkeyup="findPhoto()" placeholder="Zadajte miesto" title="Type in a name">
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="banner-section" id="img-container">
+    <p id="obr_p">
+    </p>
+</div>
+
+
+
+
+
+<!-- ------------------------------------------------------------ -->
+
+
+<!-- <h2 style="text-align:center">Lightbox</h2>
+
+<div class="row">
+    <div class="column">
+        <img src="img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="img_snow.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="img_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    </div>
+</div>
+ -->
+
+
+<section class="">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #0a4275;">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            Tomáš Jenčík
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</section>
+
+<!-- ------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------ -->
+
+</body>
+
+<script type="module" src="demo.js"></script>
+<script src="findPhoto.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script>
+    // Customization example
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        infinite: true
+    });
+</script>
+
+</html>

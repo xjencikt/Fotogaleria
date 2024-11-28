@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mapy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://unpkg.com/geogrid.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+    />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark text-white">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Galéria</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="maps.html">Mapa</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="map"></div>
+
+<section class="">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #0a4275;">
+        <!-- Grid container -->
+        <div class="container p-2 pb-0">
+            <!-- Section: CTA -->
+            <section class="">
+                <p class="d-flex justify-content-center align-items-center">
+                    <!--
+                     <button type="button" class="btn btn-outline-light btn-rounded" onclick="del()">
+                        ddd
+                    </button>
+                    -->
+                    <button type="button" class="btn btn-outline-light btn-rounded" onclick="trasa()">
+                        TRASA
+                    </button>
+                    &nbsp&nbsp
+                    <label class="switch">
+                        <input type="checkbox" onclick="del()" id="toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </p>
+            </section>
+            <!-- Section: CTA -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+           Tomáš Jenčík
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</section>
+
+<div class="banner-section" id="img-mapa">
+    <p id="obr_bratislava">
+    </p>
+    <p id="obr_chorvatsko">
+    </p>
+    <p id="obr_gdansk">
+    </p>
+    <p id="obr_plitvice">
+    </p>
+    <p id="obr_praha">
+    </p>
+    <p id="obr_santorini">
+    </p>
+</div>
+
+
+
+
+</body>
+
+
+<script type="module" src="mapy.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script type="module">
+    import { trasa, del } from "./mapy.js";
+    window.trasa=trasa;
+    window.del=del;
+</script>
+<script>
+    // Customization example
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        infinite: true
+    });
+</script>
+
+</html>
